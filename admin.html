@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pharmacopoeia</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+  <script>
+    $(document).ready(function() {
+      $(".hamburger").click(function() {
+        $(".wrapper").toggleClass("active")
+      })
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="top_navbar">
+      <div class="logo">
+        <a href="#">Pharmacopoeia</a>
+      </div>
+      <div class="top_menu">
+        <div class="home_link">
+          <a href="index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span>Home</span>
+          </a>
+        </div>
+        <div class="right_info">
+          <!-- <div class="icon_wrap">
+            <div class="icon">
+              <i class="fas fa-bell"></i>
+            </div>
+          </div> -->
+          <div class="icon_wrap">
+            <div class="icon">
+              <i class="fas fa-sign-out-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_body">
+
+      <div class="sidebar_menu">
+        <div class="inner__sidebar_menu">
+
+          <ul>
+            <li>
+              <a href="#">
+                <span class="icon">
+                  <i class="fas fa-border-all"></i></span>
+                <span class="list">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="active">
+                <span class="icon"><i class="fas fa-chart-pie"></i></span>
+                <span class="list">Charts</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Pages</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="pagesDropdown" style="color:#000;">
+                <h6 class="dropdown-header" style="color:#000;">Login Screens:</h6>
+                <a class="dropdown-item" href="regilog.html">Login / Register</a>
+                <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+                <div class="dropdown-divider"></div>
+                <h6 class="dropdown-header" style="color:#000;">Other Pages:</h6>
+                <a class="dropdown-item" href="products.html">Products Page</a>
+                <a class="dropdown-item" href="cart.html">Cart Page</a>
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon"><i class="fas fa-address-book"></i></span>
+                <span class="list">Contact</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon"><i class="fas fa-address-card"></i></span>
+                <span class="list">About</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="hamburger">
+            <div class="inner_hamburger">
+              <span class="arrow">
+                <i class="fas fa-long-arrow-alt-left"></i>
+                <i class="fas fa-long-arrow-alt-right"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-primary o-hidden h-100 shadow-lg">
+              <div class="card-body" style="text-align:center;">
+                <div class="card-body-icon">
+                  <i class="fas fa-users fa-2x"></i>
+                </div>
+                <div>Customers</div>
+                <div><span>0</span></div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-success o-hidden h-100 shadow-lg">
+              <div class="card-body" style="text-align:center;">
+                <div class="card-body-icon">
+                  <i class="fas fa-pills fa-2x"></i>
+                </div>
+                <div>Products</div>
+                <div><span>0</span></div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-warning o-hidden h-100 shadow-lg">
+              <div class="card-body" style="text-align:center;">
+                <div class="card-body-icon">
+                  <i class="fas fa-fw fa-shopping-cart fa-2x"></i>
+                </div>
+                <div>Orders</div>
+                <div><span>0</span></div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-danger o-hidden h-100 shadow-lg">
+              <div class="card-body" style="text-align:center;">
+                <div class="card-body-icon">
+                  <i class="fas fa-car fa-2x"></i>
+                </div>
+                <div>Delivery</div>
+                <div><span>0</span></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Customer Details -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Customer Details</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Contact Number</th>
+                    <th>Mail-ID</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Contact Number</th>
+                    <th>Mail-ID</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Parthesh Pawar</td>
+                    <td>Suresh tower, Agra road, kalyan west.</td>
+                    <td>9854762309</td>
+                    <td>partheshpawar@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td>Kunal Kotkar</td>
+                    <td>Lokhandwala complex, Mumbai.</td>
+                    <td>8740986541</td>
+                    <td>kunalkotkar@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td>Kedar Kharde</td>
+                    <td>Saraswati apartment, Mumbai.</td>
+                    <td>9812764523</td>
+                    <td>kedarkharde@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td>Abhay Gupta</td>
+                    <td>Golden park, Thane east.</td>
+                    <td>8877452398</td>
+                    <td>abhaygupta@gmail.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Details -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Order Details</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>00123</td>
+                    <td>Parthesh Pawar</td>
+                    <td>Delivered</td>
+                    <td>3000</td>
+                  </tr>
+                  <tr>
+                    <td>45123</td>
+                    <td>Kunal Kotkar</td>
+                    <td>Pending</td>
+                    <td>5000</td>
+                  </tr>
+                  <tr>
+                    <td>45623</td>
+                    <td>Kedar Kharde</td>
+                    <td>Delivered</td>
+                    <td>3500</td>
+                  </tr>
+                  <tr>
+                    <td>78956</td>
+                    <td>Abhay Gupta</td>
+                    <td>Pending</td>
+                    <td>6000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Details -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Products Details</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Product Name</th>
+                    <th>Supplier Nmae</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Product Name</th>
+                    <th>Supplier Nmae</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Combiflame</td>
+                    <td>Nishikant Patil</td>
+                    <td>40</td>
+                    <td>34</td>
+                  </tr>
+                  <tr>
+                    <td>Azee-500</td>
+                    <td>Ritesh Kadakoti</td>
+                    <td>35</td>
+                    <td>101.05</td>
+                  </tr>
+                  <tr>
+                    <td>Okacet-L</td>
+                    <td>Gurudatt Gaonkar</td>
+                    <td>25</td>
+                    <td>48.45</td>
+                  </tr>
+                  <tr>
+                    <td>Xylocain</td>
+                    <td>Harshad Nehate</td>
+                    <td>45</td>
+                    <td>28.85</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

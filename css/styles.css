@@ -1,0 +1,322 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1 {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+#title {
+  background-color: #00ad7c;
+  color: #fff;
+}
+
+.container-fluid {
+  padding: 3% 15% 7%;
+}
+
+/* Navigation bar */
+.navbar {
+  padding: 0 0 4.5rem 0;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-family: "Montserrat";
+  font-weight: lighter;
+}
+
+.download-btn {
+  margin: 5% 3% 5% 0;
+}
+
+.title-img {
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 5%;
+}
+
+/* Feature Section */
+#features {
+  padding: 7% 15%;
+  background-color: #fff;
+  position: relative;
+}
+
+.feature-box {
+  padding: 5%;
+}
+
+.icon {
+  color: #52d681;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #00ad7c;
+}
+
+/* Testimonial Section */
+#testimonials {
+  background-color: #52d681;
+  color: #fff;
+}
+
+.testimonials-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+#about{
+  padding: 100px;
+  background-color: #fff;
+}
+
+.about-img{
+  width: 60%;
+  margin-bottom: 50px;
+}
+.about-column{
+  padding: 3% 2%;
+}
+
+
+/* footer section */
+#footer {
+  background-color: #00ad7c;
+  padding: 4% 10%;
+}
+
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-img {
+    position: static;
+    transform: rotate(0);
+  }
+  .check_btn{
+  position:absolute;
+   right:15.5%;
+  width: 75px;
+  }
+}
+
+
+
+
+/* Products-page */
+.productsBar {
+  color: #fff;
+}
+
+.products {
+  padding: 0.7rem 0 2.7rem;
+}
+
+.product-brand {
+  padding-left: 10px;
+}
+
+.mt-0 {
+  font-family: "Ubuntu";
+  font-size: 22px;
+}
+
+.mt1 {
+  font-family: "Ubuntu";
+  font-size: 20px;
+}
+
+.mt2 {
+  font-family: "Ubuntu";
+  font-size: 16px;
+}
+
+.media-body {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.medpic {
+  width: 30%;
+}
+
+.add-cart {
+  background-color:#00ad7c;
+  color:#fff;
+
+}
+
+/* Cart Page */
+
+.products-container, .product-section {
+  /* max-width: 850px; */
+  width: 1300px;
+  height: 100%;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+.product-header {
+  width: 100%;
+  /* max-width: 750px; */
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid lightgrey;
+  margin: 0 auto;
+}
+
+.pimg {
+  width: 20%;
+  padding-left: 45px;
+}
+
+.product-title {
+  width: 40%;
+  text-align: left;
+}
+
+
+.price {
+  width: 20%;
+  padding-left: 40px;
+  display: flex;
+  align-items: left;
+}
+
+.quantity {
+  width: 30%;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.total {
+  width: 10%;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.remove {
+  width: 10%;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+
+}
+
+.product {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+  padding-right: 160px;
+  margin-top: 50px;
+  border-top: 4px solid lightgray;
+}
+
+.basketTotalTitle {
+  width: 17%;
+  display: flex;
+  align-items: center;
+}
+
+.basketTotal {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.dpro1 {
+  width: 10%;
+}
+
+/* animation section */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #024249;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100%;
+  width: 5%;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s;
+
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
